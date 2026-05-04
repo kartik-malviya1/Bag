@@ -11,7 +11,7 @@ const navLinks = [
     // { label: 'SHOP', path: '/products' },
     { label: 'OUR STORY', path: '/about' },
     { label: 'BLOGS', path: '/blog' },
-    { label: 'REVIEWS', path: '#reviews' },
+    { label: 'REVIEWS', path: '/#reviews' },
     { label: 'CONTACT', path: '/contact' },
 ];
 

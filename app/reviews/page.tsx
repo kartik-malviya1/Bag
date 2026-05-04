@@ -24,7 +24,6 @@ function ReviewCard({ review, index }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             className="border border-border p-8 bg-card"
-            id='reviews'
         >
             <div className="flex gap-1 mb-5">
                 {Array(5).fill(null).map((_, i) => (
@@ -48,7 +47,7 @@ function ReviewCard({ review, index }) {
 
 export default function Reviews() {
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background" id='reviews'>
             <div className="pt-32 pb-16 md:pb-24">
                 <div className="max-w-[120rem] mx-auto px-6 md:px-12">
                     <motion.div

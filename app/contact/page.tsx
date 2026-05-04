@@ -7,8 +7,10 @@ import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Navbar from '@/components/mira/Navbar';
 import Footer from '@/components/mira/Footer';
+import { catalogueCategories } from '@/lib/catalogueData';
 
 export default function Contact() {
     const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
@@ -60,12 +62,19 @@ export default function Contact() {
                                         className="h-12 bg-transparent border-border text-sm"
                                     />
                                 </div>
-                                <Input
-                                    placeholder="Subject"
-                                    value={form.subject}
-                                    onChange={(e) => handleChange('subject', e.target.value)}
-                                    className="h-12 bg-transparent border-border text-sm"
-                                />
+                                <Select value={form.subject} onValueChange={(value) => handleChange('subject', value)}>
+                                    <SelectTrigger className="h-12 bg-transparent border-border text-sm w-full focus:ring-1 focus:ring-foreground/20">
+                                        <SelectValue placeholder="Select Subject / Category" />
+                                    </SelectTrigger>
+                                    <SelectContent position="popper" sideOffset={4} className="w-[var(--radix-select-trigger-width)] bg-background border-border shadow-xl max-h-[250px] overflow-y-auto z-50">
+                                        <SelectItem value="general-inquiry" className="py-3 cursor-pointer">General Inquiry</SelectItem>
+                                        {catalogueCategories.map((category) => (
+                                            <SelectItem key={category.id} value={category.label} className="py-3 cursor-pointer">
+                                                {category.label}
+                                            </SelectItem>
+                                        ))}
+                                    </SelectContent>
+                                </Select>
                                 <Textarea
                                     placeholder="Your Message"
                                     value={form.message}
@@ -87,7 +96,7 @@ export default function Contact() {
                             <h3 className="font-heading text-2xl font-medium mb-8">Contact Information</h3>
                             <div className="space-y-8">
                                 {[
-                                    { icon: MapPin, label: 'Address', value: 'M.P. Nagar, Near Vespa Showroom, Bhopal, Madhya Pradesh, India' },
+                                    { icon: MapPin, label: 'Address', value: '34 A Rachna nagar, Govindpura, Bhopal, Madhya Pradesh, India' },
                                     { icon: Mail, label: 'Email', value: 'info@corporateuniformm.com' },
                                     { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
                                     { icon: Clock, label: 'Hours', value: 'Monday - Saturday, 10:00 AM - 7:00 PM' },
@@ -105,13 +114,9 @@ export default function Contact() {
                             </div>
 
                             {/* Map placeholder */}
-                            {/* <div className="mt-10 aspect-[4/3] bg-secondary flex items-center justify-center"> */}
-                            {/* <div className="text-center">
-                                    <MapPin className="w-8 h-8 text-muted-foreground mx-auto mb-3" strokeWidth={1} />
-                                    <p className="text-sm text-muted-foreground">Visit us at our flagship store</p>
-                                </div> */}
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.022741345544!2d77.43322247463584!3d23.242259508095547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c436c254b7d5f%3A0x73d3fc2e8eb6820b!2sCorporate%20Uniforms%20By%20BAG%20GROUP!5e0!3m2!1sen!2sin!4v1777934011845!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} className=' mt-6' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            {/* </div> */}
+                            <div className="mt-10 aspect-video md:aspect-[4/3] w-full bg-secondary flex items-center justify-center overflow-hidden rounded-md border border-border">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.022741345544!2d77.43322247463584!3d23.242259508095547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c436c254b7d5f%3A0x73d3fc2e8eb6820b!2sCorporate%20Uniforms%20By%20BAG%20GROUP!5e0!3m2!1sen!2sin!4v1777934011845!5m2!1sen!2sin" className="w-full h-full border-0" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
