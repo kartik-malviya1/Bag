@@ -59,8 +59,9 @@ export default function Hero() {
                             transition={{ duration: 0.9, delay: 0.5, ease: 'easeOut' }}
                             className="font-heading text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-medium leading-[1.05] tracking-tight mb-8 md:mb-12"
                         >
-                            Uniforms for{' '}
-                            <span className="italic">Your Brand</span>
+                            Uniforms that <br />
+                            Define <br />
+                            Your Brand{' '}
                         </motion.h1>
 
                         <motion.div
