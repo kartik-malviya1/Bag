@@ -60,7 +60,7 @@ export default function Hero() {
                             transition={{ duration: 0.7, delay: 0.5 }}
                         >
                             <span className="block w-8 h-px bg-muted-foreground" />
-                            <span className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground font-medium">
+                            <span className="text-[11px] tracking-[0.20em] uppercase text-muted-foreground font-medium">
                                 B2B Corporate Uniform Solutions
                             </span>
                             <span className="block w-8 h-px bg-muted-foreground" />
@@ -70,7 +70,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                            className="font-heading text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-medium leading-[1.05] tracking-tight mb-8 md:mb-10"
+                            className="font-heading text-4xl md:text-6xl lg:text-6xl xl:text-[4.5rem] font-medium leading-[1.05] tracking-tight mb-8 md:mb-10"
                         >
                             Uniforms that
                             <br />

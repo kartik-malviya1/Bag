@@ -14,6 +14,7 @@ import Marquee from '@/components/mira/Marquee';
 import Newsletter from '@/components/mira/Newsletter';
 import Footer from '@/components/mira/Footer';
 import Reviews from './reviews/page';
+import Contact from './contact/page';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <Reviews />
       <StoreLocator />
       <Newsletter />
+      <Contact />
       <Footer />
     </div>
   );

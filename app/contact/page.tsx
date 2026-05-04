@@ -19,7 +19,7 @@ export default function Contact() {
 
     return (
         <div className="min-h-screen bg-background">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="pt-32 pb-16 md:pb-24">
                 <div className="max-w-[120rem] mx-auto px-6 md:px-12">
                     {/* Header */}
@@ -121,7 +121,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div >
-            <Footer />
+            {/* <Footer /> */}
         </div >
     );
 }
