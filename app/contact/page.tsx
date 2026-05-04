@@ -105,17 +105,18 @@ export default function Contact() {
                             </div>
 
                             {/* Map placeholder */}
-                            <div className="mt-10 aspect-[4/3] bg-secondary flex items-center justify-center">
-                                <div className="text-center">
+                            {/* <div className="mt-10 aspect-[4/3] bg-secondary flex items-center justify-center"> */}
+                            {/* <div className="text-center">
                                     <MapPin className="w-8 h-8 text-muted-foreground mx-auto mb-3" strokeWidth={1} />
                                     <p className="text-sm text-muted-foreground">Visit us at our flagship store</p>
-                                </div>
-                            </div>
+                                </div> */}
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.022741345544!2d77.43322247463584!3d23.242259508095547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c436c254b7d5f%3A0x73d3fc2e8eb6820b!2sCorporate%20Uniforms%20By%20BAG%20GROUP!5e0!3m2!1sen!2sin!4v1777934011845!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} className=' mt-6' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            {/* </div> */}
                         </motion.div>
                     </div>
                 </div>
-            </div>
+            </div >
             <Footer />
-        </div>
+        </div >
     );
 }
