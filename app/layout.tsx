@@ -1,21 +1,7 @@
 //@ts-nocheck
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  weight: ['300', '400', '500', '600', '700'],
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-heading',
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-});
 
 export const metadata: Metadata = {
   title: "Corporate Uniforms By B.A.G Group",
@@ -30,7 +16,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", inter.variable, playfair.variable, "font-sans")}
+      className={cn("h-full", "antialiased", "font-sans")}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
