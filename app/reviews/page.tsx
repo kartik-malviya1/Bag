@@ -49,7 +49,6 @@ function ReviewCard({ review, index }) {
 export default function Reviews() {
     return (
         <div className="min-h-screen bg-background">
-            <Navbar />
             <div className="pt-32 pb-16 md:pb-24">
                 <div className="max-w-[120rem] mx-auto px-6 md:px-12">
                     <motion.div
@@ -68,7 +67,6 @@ export default function Reviews() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
